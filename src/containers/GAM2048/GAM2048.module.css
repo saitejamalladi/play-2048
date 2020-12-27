@@ -1,0 +1,176 @@
+.Container {
+	outline: 0;
+	height: 130vh;
+}
+.GAM2048 {
+	display: inline-block;
+	text-align: center;
+	width: 500px;
+}
+.GAM2048 h1 {
+	margin: 10px;
+	font-size: 80px;
+	font-weight: bold;
+}
+.ScoreBoard {
+	float: right;
+	background-color: #bbada0;
+	border-radius: 8px;
+	height: 60px;
+	margin-top: 10px;
+	margin-right: 30px;
+	width: 100px;
+	padding: 10px;
+}
+.ScoreBoard h3 {
+	margin: 0;
+	padding-top: 5px;
+	text-transform: uppercase;
+	color: #eee4da;
+	font-size: 13px;
+}
+.ScoreBoard p {
+	padding: 0;
+	margin-top: 10px;
+	color: white;
+	border-radius: 3px;
+	font-weight: bold;
+	font-size: 25px;
+}
+.About {
+	text-align: left;
+	padding-left: 20px;
+	line-height: 1.2;
+	margin-left: 20px;
+	margin-bottom: 0;
+}
+.About p {
+	padding: 0;
+	margin: 0;
+	letter-spacing: 1px;
+}
+.About a {
+	color: #776e65;
+	font-weight: bold;
+	text-decoration: underline;
+	cursor: pointer;
+}
+.Feedback {
+	float: none;
+	position: fixed;
+	font-size: 13px;
+	text-decoration: none;
+	padding: 2px 0;
+	background-color: #8f7a66;
+	color: #f9f6f2;
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+	transform-origin: left bottom;
+	width: 150px;
+	text-align: center;
+	letter-spacing: 0.08em;
+	z-index: 0;
+	opacity: 0.6;
+	transition: opacity 200ms ease;
+}
+.Feedback a {
+	text-decoration: none;
+	color: inherit;
+}
+.Feedback a:hover {
+	font-size: 14px;
+	background-color: #776e65;
+}
+.Button {
+	margin-right: 30px;
+	background-color: #8f7a66;
+	border: 0;
+	border-radius: 3px;
+	padding: 0 20px;
+	text-decoration: none;
+	color: #f9f6f2;
+	height: 40px;
+	line-height: 42px;
+	cursor: pointer;
+	display: block;
+	text-align: center;
+	font-weight: bold;
+	font-size: 18px;
+	float: right;
+	outline: 0;
+}
+.Button:hover {
+	background-color: #8f7a66;
+}
+
+.Board {
+	margin: 20px;
+	display: inline-block;
+	text-align: center;
+}
+
+.Grid {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	background-color: #bbada0;
+	border-radius: 5px;
+	width: 420px;
+	height: 420px;
+}
+
+.GridRow {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+}
+
+.Modal {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.Confirmation {
+	width: 100%;
+	text-align: center;
+	color: white;
+	outline: 0;
+	border: 0;
+}
+.StartButton {
+	margin-right: 30px;
+	border: 0;
+	border-radius: 3px;
+	padding: 0 20px;
+	text-decoration: none;
+	text-transform: uppercase;
+	color: #f9f6f2;
+	height: 40px;
+	line-height: 42px;
+	cursor: pointer;
+	display: block;
+	text-align: center;
+	font-weight: bold;
+	font-size: 50px;
+	font-family: inherit;
+	float: right;
+	outline: 0;
+}
+@media only screen and (min-width: 600px) {
+	.Container {
+		height: 100vh;
+	}
+	.Feedback {
+		left: 0;
+		top: 50%;
+		top: calc(50% - 122px);
+		transform: rotate(90deg);
+	}
+}
+@media only screen and (max-width: 600px) {
+	.Feedback {
+		bottom: 10px;
+		left: 50%;
+		left: calc(50% - 80px);
+	}
+}

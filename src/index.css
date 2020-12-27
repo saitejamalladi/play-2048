@@ -1,8 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url(https://allfont.net/allfont.css?fonts=clear-sans);
 
 body {
+  color: #776e65;
+  background-color: #faf8ef;
   margin: 0;
-  font-family: "Poppins", Helvetica, sans-serif;
+  font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
