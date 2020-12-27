@@ -1,0 +1,60 @@
+.GridCell {
+	justify-content: center;
+	display: flex;
+	flex-direction: column;
+	border-radius: 4px;
+	width: 90px;
+	height: 90px;
+	color: white;
+	font-size: 50px;
+	font-weight: bold;
+}
+
+.Cell-0 {
+	background-color: #ccc0b3;
+}
+.Cell-2 {
+	color: grey;
+	background-color: #eee4da;
+}
+.Cell-4 {
+	color: grey;
+	background-color: #ede0c8;
+}
+.Cell-8 {
+	background-color: #f2b179;
+}
+.Cell-16 {
+	background-color: #f59563;
+}
+.Cell-32 {
+	background-color: #f67c5f;
+}
+.Cell-64 {
+	background-color: #f65e3b;
+}
+.Cell-128 {
+	font-size: 45px;
+	background-color: #edcf72;
+}
+.Cell-256 {
+	font-size: 45px;
+	background-color: #edcc61;
+}
+.Cell-512 {
+	font-size: 45px;
+	background-color: #edc850;
+}
+.Cell-1024 {
+	font-size: 35px;
+	background-color: #edc53f;
+	box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.4761904762), inset 0 0 0 1px rgba(255, 255, 255, 0.2857142857);
+}
+.Cell-2048 {
+	font-size: 35px;
+	background-color: #edc22e;
+	box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.4761904762), inset 0 0 0 1px rgba(255, 255, 255, 0.2857142857);
+}
+.Cell-final {
+	background-color: #3c3a32;
+}
