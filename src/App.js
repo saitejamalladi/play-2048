@@ -1,14 +1,12 @@
 import React, {Component} from 'react';
-import Canvas from "./containers/Canvas/Canvas";
 import classes from './App.module.css';
+import GAM2048 from "./containers/GAM2048/GAM2048";
 
 class App extends Component {
   render () {
     return (
       <div className={classes.App}>
-        <h1>Welcome to  2048.</h1>
-        <p>Join the numbers and get to the 2048 tile!</p>
-        <Canvas/>
+        <GAM2048/>
       </div>
     );
   }

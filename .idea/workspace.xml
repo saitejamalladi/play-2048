@@ -1,7 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="034aa286-bdeb-4daa-b400-58a7e6e9f614" name="Default Changelist" comment="" />
+    <list default="true" id="034aa286-bdeb-4daa-b400-58a7e6e9f614" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/Controls/Controls.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Tile/Tile.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Tile/Tile.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/containers/GAM2048/GAM2048.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/containers/GAM2048/GAM2048.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/Canvas/Canvas.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/Canvas/Canvas.module.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -29,7 +59,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/containers/Canvas" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -37,18 +67,22 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Sai-Teja-Malladi\my-profile\play-2048\src\components" />
+      <recent name="D:\Sai-Teja-Malladi\my-profile\play-2048\src\containers" />
       <recent name="D:\Sai-Teja-Malladi\my-profile\play-2048\src\containers\Canvas" />
       <recent name="D:\Sai-Teja-Malladi\my-profile\play-2048\public" />
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -62,18 +96,35 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1608888062788</updated>
-      <workItem from="1608888063816" duration="7069000" />
+      <workItem from="1608888063816" duration="15226000" />
+      <workItem from="1609066805398" duration="20116000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="339" y="162" key="run.anything.popup" timestamp="1608894807417">
+    <state x="389" y="68" width="587" height="592" key="find.popup" timestamp="1609088794567">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1608894807417" />
+    <state x="389" y="68" width="587" height="592" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1609088794567" />
+    <state x="339" y="162" width="672" height="677" key="run.anything.popup" timestamp="1609083578867">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="339" y="162" width="672" height="677" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1609083578867" />
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1608893899782">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
