@@ -9,7 +9,6 @@ class GAM2048 extends Component {
 	state = {
 		active: false,
 		board : null,
-		key: null,
 		rows: 4,
 		cols: 4
 	}
@@ -20,7 +19,7 @@ class GAM2048 extends Component {
 		ReactDOM.findDOMNode(this).addEventListener('escape', (event) => {this.handleKeyPress(event)});
 	}
 	focusDiv() {
-		ReactDOM.findDOMNode(this.refs.theDiv).focus();
+		ReactDOM.findDOMNode(this.refs['theDiv']).focus();
 	}
 	generateBoard = () => {
 		let board = [];
@@ -216,7 +215,6 @@ class GAM2048 extends Component {
 			case 2: updatedBoard = this.moveLeft(updatedBoard, this.state.rows, this.state.cols); break;
 			case 3: updatedBoard = this.moveRight(updatedBoard, this.state.rows, this.state.cols); break;
 			case 4: updatedBoard = this.moveDown(updatedBoard, this.state.rows, this.state.cols); break;
-			case 5: this.initBoard(); return;
 			default:
 		}
 		updatedBoard = this.populateNewDigits(updatedBoard);
@@ -243,8 +241,9 @@ class GAM2048 extends Component {
 		}
 	}
 	handleClick = (key) => {
-		this.setState({key: key});
-		this.updateBoard(key);
+		if(key) {
+			this.updateBoard(key);
+		}
 	}
 	handleReset = () => {
 		this.initBoard();
@@ -264,7 +263,45 @@ class GAM2048 extends Component {
 	handleStart = () => {
 		this.setState({active: true});
 	}
+	handleTouchStart = (e) => {
+		const firstTouch = e.touches[0];
+		this.setState({
+			xStartLocation: firstTouch.clientX,
+			yStartLocation: firstTouch.clientY
+		})
+	};
 
+	handleTouchMove = (e) => {
+		let xStartLocation = this.state.xStartLocation;
+		let yStartLocation = this.state.yStartLocation;
+		if ( ! xStartLocation || ! yStartLocation ) {
+			return;
+		}
+		let xEndLocation = e.changedTouches[0].clientX;
+		let yEndLocation = e.changedTouches[0].clientY;
+		let xDiff = xStartLocation - xEndLocation;
+		let yDiff = yStartLocation - yEndLocation;
+		if(xDiff !== 0 || yDiff !== 0) {
+			if ( Math.abs( xDiff ) > Math.abs( yDiff ) ) {
+				if ( xDiff > 0 ) {
+					this.handleClick(2);
+				} else {
+					this.handleClick(3);
+				}
+			} else {
+				if ( yDiff > 0 ) {
+					this.handleClick(1);
+				} else {
+					this.handleClick(4);
+				}
+			}
+		}
+		this.setState({
+			xStartLocation: null,
+			yStartLocation: null
+		})
+		this.handleClick()
+	};
 	render() {
 		let board  = null;
 		if(this.state.board && this.state.board.length > 0) {
@@ -287,7 +324,11 @@ class GAM2048 extends Component {
 			);
 		}
 		return (
-			<div ref = "theDiv" tabIndex={-1} className={classes.Container} >
+			<div ref="theDiv"
+			     onTouchStart={this.handleTouchStart}
+			     onTouchEnd={this.handleTouchMove}
+			     tabIndex={-1}
+			     className={classes.Container} >
 				<Modal
 					aria-labelledby="transition-modal-title"
 					aria-describedby="transition-modal-description"
