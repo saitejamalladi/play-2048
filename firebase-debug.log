@@ -1,0 +1,112 @@
+[debug] [2020-12-29T03:11:47.739Z] ----------------------------------------------------------------------
+[debug] [2020-12-29T03:11:47.741Z] Command:       C:\Program Files\nodejs\bin\node.exe C:\Users\SaiTeja\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2020-12-29T03:11:47.742Z] CLI Version:   9.1.0
+[debug] [2020-12-29T03:11:47.742Z] Platform:      win32
+[debug] [2020-12-29T03:11:47.742Z] Node Version:  v12.18.2
+[debug] [2020-12-29T03:11:47.743Z] Time:          Tue Dec 29 2020 11:11:47 GMT+0800 (Singapore Standard Time)
+[debug] [2020-12-29T03:11:47.743Z] ----------------------------------------------------------------------
+[debug] [2020-12-29T03:11:47.743Z] 
+[debug] [2020-12-29T03:11:47.747Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2020-12-29T03:11:47.773Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-12-29T03:11:47.773Z] > authorizing via signed-in user
+[debug] [2020-12-29T03:11:47.774Z] [iam] checking project play-2048-f02a5 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2020-12-29T03:11:47.777Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2020-12-29T03:11:47.777Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2020-12-29T03:11:47.889Z] <<< HTTP RESPONSE 200 {"pragma":"no-cache","expires":"Mon, 01 Jan 1990 00:00:00 GMT","date":"Tue, 29 Dec 2020 03:11:47 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-12-29T03:11:47.905Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/play-2048-f02a5:testIamPermissions  
+ {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2020-12-29T03:11:48.456Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2020-12-29T03:11:48.456Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[debug] [2020-12-29T03:11:49.023Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 29 Dec 2020 03:11:48 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=1069","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-12-29T03:11:49.025Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/play-2048-f02a5  
+ 
+[debug] [2020-12-29T03:11:49.321Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 29 Dec 2020 03:11:48 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] 
+[info] === Deploying to 'play-2048-f02a5'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2020-12-29T03:11:49.439Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/play-2048-f02a5/versions  
+ {"config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2020-12-29T03:11:51.364Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 29 Dec 2020 03:11:50 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] i  hosting[play-2048-f02a5]: beginning deploy... 
+[info] i  hosting[play-2048-f02a5]: found 18 files in build 
+[debug] [2020-12-29T03:11:51.558Z] > refreshing access token with scopes: []
+[debug] [2020-12-29T03:11:51.558Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2020-12-29T03:11:51.560Z] [hosting] hash cache [YnVpbGQ] stored for 18 files
+[debug] [2020-12-29T03:11:51.560Z] [hosting][hash queue][FINAL] {"max":164,"min":4,"avg":20.11111111111111,"active":0,"complete":18,"success":18,"errored":0,"retried":0,"total":18,"elapsed":171}
+[debug] [2020-12-29T03:11:51.623Z] <<< HTTP RESPONSE 200 {"date":"Tue, 29 Dec 2020 03:11:50 GMT","pragma":"no-cache","expires":"Mon, 01 Jan 1990 00:00:00 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-12-29T03:11:51.633Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/sites/play-2048-f02a5/versions/ca2cdeaa8c0c37dc:populateFiles [none]
+[debug] [2020-12-29T03:11:51.633Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/sites/play-2048-f02a5/versions/ca2cdeaa8c0c37dc:populateFiles {"files":{"/logo192.png":"3ee59515172ee198f3be375979df15ac5345183e656720a381b8872b2a39dc8b","/logo512.png":"ee7e2f3fdb8209c4b6fd7bef6ba50d1b9dba30a25bb5c3126df057e1cb6f5331","/manifest.json":"aff3449bdc238776f5d6d967f19ec491b36aed5fb7f23ccff6500736fd58494a","/robots.txt":"bfe106a3fb878dc83461c86818bf74fc1bdc7f28538ba613cd3e775516ce8b49","/asset-manifest.json":"aeea09a3f57bb0e17017b5ce1e8ba319577bdc195f951b111936fd7987e6d7c7","/favicon.ico":"248c9e8dd6f68adf6a1f78999401aa49b15619eed25c6db47b806acc188f610a","/index.html":"43aeea3c61e750f35a331724e1f044396d57084d5216a8bdb5cbf56846b51cf9","/static/css/main.c8594145.chunk.css":"dbf9f5f0e95911f12b65eafc3ac0e5ba50e3d10ee48b5a646473123bf46ff570","/static/js/2.fae8fdb4.chunk.js.LICENSE.txt":"8a08d6c8c0024ba11449cc7f061e67427fd2717f500245b22c56fb9f3b525335","/static/css/main.c8594145.chunk.css.map":"6ecf5d22d0af60e32cf6784a26b5f465c4b42499ee5257c21045c29647736538","/static/js/3.7c23dfc2.chunk.js":"57bcec17c487d26bee3b7131b1b0e067910c97723e80c92aed56d98159ab925e","/static/js/3.7c23dfc2.chunk.js.map":"c8e24c20c610a34f0a2e34f265cf75f81f1f5480041b263182d0acc1c5d78da1","/static/js/main.345c2ed4.chunk.js":"021ee0f4dd3b5624867aaeaf5871c813fdebb47a224b332bd20d33bc074921ec","/static/js/runtime-main.09a489d2.js":"747c663d0c5a96f01684830347882a97eec1cb7d28e3ea28bd20ed9b92ed864d","/static/js/main.345c2ed4.chunk.js.map":"f94354ba50b7cdddba6b2fde600aefc4241f79c63914d1a6f87fdfbe00412d66","/static/js/runtime-main.09a489d2.js.map":"2815c3a1d5c983e76d52c1ad2ee387762dd70c450cc9d2df2473a50627465693","/static/js/2.fae8fdb4.chunk.js":"743dc8850491a1cb84a20acd115a326a664ccc00fe6770eacbefa29074f5e4e2","/static/js/2.fae8fdb4.chunk.js.map":"d84ccdb0224bbeed912e388068be23af228feec46e6caf5de66204be32e8f6e0"}}
+[debug] [2020-12-29T03:11:53.183Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/sites/play-2048-f02a5/versions/ca2cdeaa8c0c37dc:populateFiles 200
+[debug] [2020-12-29T03:11:53.183Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/sites/play-2048-f02a5/versions/ca2cdeaa8c0c37dc:populateFiles {"uploadRequiredHashes":["43aeea3c61e750f35a331724e1f044396d57084d5216a8bdb5cbf56846b51cf9","d84ccdb0224bbeed912e388068be23af228feec46e6caf5de66204be32e8f6e0","dbf9f5f0e95911f12b65eafc3ac0e5ba50e3d10ee48b5a646473123bf46ff570","f94354ba50b7cdddba6b2fde600aefc4241f79c63914d1a6f87fdfbe00412d66","6ecf5d22d0af60e32cf6784a26b5f465c4b42499ee5257c21045c29647736538","743dc8850491a1cb84a20acd115a326a664ccc00fe6770eacbefa29074f5e4e2","021ee0f4dd3b5624867aaeaf5871c813fdebb47a224b332bd20d33bc074921ec","aeea09a3f57bb0e17017b5ce1e8ba319577bdc195f951b111936fd7987e6d7c7","248c9e8dd6f68adf6a1f78999401aa49b15619eed25c6db47b806acc188f610a"],"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/play-2048-f02a5/versions/ca2cdeaa8c0c37dc/files"}
+[debug] [2020-12-29T03:11:53.191Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/play-2048-f02a5/versions/ca2cdeaa8c0c37dc/files/43aeea3c61e750f35a331724e1f044396d57084d5216a8bdb5cbf56846b51cf9 [none]
+[debug] [2020-12-29T03:11:53.192Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/play-2048-f02a5/versions/ca2cdeaa8c0c37dc/files/43aeea3c61e750f35a331724e1f044396d57084d5216a8bdb5cbf56846b51cf9 [stream]
+[debug] [2020-12-29T03:11:53.195Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/play-2048-f02a5/versions/ca2cdeaa8c0c37dc/files/d84ccdb0224bbeed912e388068be23af228feec46e6caf5de66204be32e8f6e0 [none]
+[debug] [2020-12-29T03:11:53.195Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/play-2048-f02a5/versions/ca2cdeaa8c0c37dc/files/d84ccdb0224bbeed912e388068be23af228feec46e6caf5de66204be32e8f6e0 [stream]
+[debug] [2020-12-29T03:11:53.197Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/play-2048-f02a5/versions/ca2cdeaa8c0c37dc/files/dbf9f5f0e95911f12b65eafc3ac0e5ba50e3d10ee48b5a646473123bf46ff570 [none]
+[debug] [2020-12-29T03:11:53.197Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/play-2048-f02a5/versions/ca2cdeaa8c0c37dc/files/dbf9f5f0e95911f12b65eafc3ac0e5ba50e3d10ee48b5a646473123bf46ff570 [stream]
+[debug] [2020-12-29T03:11:53.199Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/play-2048-f02a5/versions/ca2cdeaa8c0c37dc/files/f94354ba50b7cdddba6b2fde600aefc4241f79c63914d1a6f87fdfbe00412d66 [none]
+[debug] [2020-12-29T03:11:53.199Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/play-2048-f02a5/versions/ca2cdeaa8c0c37dc/files/f94354ba50b7cdddba6b2fde600aefc4241f79c63914d1a6f87fdfbe00412d66 [stream]
+[debug] [2020-12-29T03:11:53.201Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/play-2048-f02a5/versions/ca2cdeaa8c0c37dc/files/6ecf5d22d0af60e32cf6784a26b5f465c4b42499ee5257c21045c29647736538 [none]
+[debug] [2020-12-29T03:11:53.201Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/play-2048-f02a5/versions/ca2cdeaa8c0c37dc/files/6ecf5d22d0af60e32cf6784a26b5f465c4b42499ee5257c21045c29647736538 [stream]
+[debug] [2020-12-29T03:11:53.203Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/play-2048-f02a5/versions/ca2cdeaa8c0c37dc/files/743dc8850491a1cb84a20acd115a326a664ccc00fe6770eacbefa29074f5e4e2 [none]
+[debug] [2020-12-29T03:11:53.203Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/play-2048-f02a5/versions/ca2cdeaa8c0c37dc/files/743dc8850491a1cb84a20acd115a326a664ccc00fe6770eacbefa29074f5e4e2 [stream]
+[debug] [2020-12-29T03:11:53.204Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/play-2048-f02a5/versions/ca2cdeaa8c0c37dc/files/021ee0f4dd3b5624867aaeaf5871c813fdebb47a224b332bd20d33bc074921ec [none]
+[debug] [2020-12-29T03:11:53.204Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/play-2048-f02a5/versions/ca2cdeaa8c0c37dc/files/021ee0f4dd3b5624867aaeaf5871c813fdebb47a224b332bd20d33bc074921ec [stream]
+[debug] [2020-12-29T03:11:53.205Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/play-2048-f02a5/versions/ca2cdeaa8c0c37dc/files/aeea09a3f57bb0e17017b5ce1e8ba319577bdc195f951b111936fd7987e6d7c7 [none]
+[debug] [2020-12-29T03:11:53.205Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/play-2048-f02a5/versions/ca2cdeaa8c0c37dc/files/aeea09a3f57bb0e17017b5ce1e8ba319577bdc195f951b111936fd7987e6d7c7 [stream]
+[debug] [2020-12-29T03:11:53.206Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/play-2048-f02a5/versions/ca2cdeaa8c0c37dc/files/248c9e8dd6f68adf6a1f78999401aa49b15619eed25c6db47b806acc188f610a [none]
+[debug] [2020-12-29T03:11:53.206Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/play-2048-f02a5/versions/ca2cdeaa8c0c37dc/files/248c9e8dd6f68adf6a1f78999401aa49b15619eed25c6db47b806acc188f610a [stream]
+[debug] [2020-12-29T03:11:53.208Z] [hosting][populate queue][FINAL] {"max":1633,"min":1633,"avg":1633,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":1650}
+[debug] [2020-12-29T03:11:53.208Z] [hosting] uploads queued: 9
+[debug] [2020-12-29T03:11:54.662Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/play-2048-f02a5/versions/ca2cdeaa8c0c37dc/files/743dc8850491a1cb84a20acd115a326a664ccc00fe6770eacbefa29074f5e4e2 200
+[debug] [2020-12-29T03:11:54.662Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/play-2048-f02a5/versions/ca2cdeaa8c0c37dc/files/743dc8850491a1cb84a20acd115a326a664ccc00fe6770eacbefa29074f5e4e2 [stream]
+[debug] [2020-12-29T03:11:54.665Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/play-2048-f02a5/versions/ca2cdeaa8c0c37dc/files/43aeea3c61e750f35a331724e1f044396d57084d5216a8bdb5cbf56846b51cf9 200
+[debug] [2020-12-29T03:11:54.665Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/play-2048-f02a5/versions/ca2cdeaa8c0c37dc/files/43aeea3c61e750f35a331724e1f044396d57084d5216a8bdb5cbf56846b51cf9 [stream]
+[debug] [2020-12-29T03:11:54.667Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/play-2048-f02a5/versions/ca2cdeaa8c0c37dc/files/aeea09a3f57bb0e17017b5ce1e8ba319577bdc195f951b111936fd7987e6d7c7 200
+[debug] [2020-12-29T03:11:54.667Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/play-2048-f02a5/versions/ca2cdeaa8c0c37dc/files/aeea09a3f57bb0e17017b5ce1e8ba319577bdc195f951b111936fd7987e6d7c7 [stream]
+[debug] [2020-12-29T03:11:54.693Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/play-2048-f02a5/versions/ca2cdeaa8c0c37dc/files/dbf9f5f0e95911f12b65eafc3ac0e5ba50e3d10ee48b5a646473123bf46ff570 200
+[debug] [2020-12-29T03:11:54.693Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/play-2048-f02a5/versions/ca2cdeaa8c0c37dc/files/dbf9f5f0e95911f12b65eafc3ac0e5ba50e3d10ee48b5a646473123bf46ff570 [stream]
+[debug] [2020-12-29T03:11:54.706Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/play-2048-f02a5/versions/ca2cdeaa8c0c37dc/files/f94354ba50b7cdddba6b2fde600aefc4241f79c63914d1a6f87fdfbe00412d66 200
+[debug] [2020-12-29T03:11:54.706Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/play-2048-f02a5/versions/ca2cdeaa8c0c37dc/files/f94354ba50b7cdddba6b2fde600aefc4241f79c63914d1a6f87fdfbe00412d66 [stream]
+[debug] [2020-12-29T03:11:54.724Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/play-2048-f02a5/versions/ca2cdeaa8c0c37dc/files/021ee0f4dd3b5624867aaeaf5871c813fdebb47a224b332bd20d33bc074921ec 200
+[debug] [2020-12-29T03:11:54.724Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/play-2048-f02a5/versions/ca2cdeaa8c0c37dc/files/021ee0f4dd3b5624867aaeaf5871c813fdebb47a224b332bd20d33bc074921ec [stream]
+[debug] [2020-12-29T03:11:54.732Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/play-2048-f02a5/versions/ca2cdeaa8c0c37dc/files/248c9e8dd6f68adf6a1f78999401aa49b15619eed25c6db47b806acc188f610a 200
+[debug] [2020-12-29T03:11:54.732Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/play-2048-f02a5/versions/ca2cdeaa8c0c37dc/files/248c9e8dd6f68adf6a1f78999401aa49b15619eed25c6db47b806acc188f610a [stream]
+[debug] [2020-12-29T03:11:54.772Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/play-2048-f02a5/versions/ca2cdeaa8c0c37dc/files/d84ccdb0224bbeed912e388068be23af228feec46e6caf5de66204be32e8f6e0 200
+[debug] [2020-12-29T03:11:54.772Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/play-2048-f02a5/versions/ca2cdeaa8c0c37dc/files/d84ccdb0224bbeed912e388068be23af228feec46e6caf5de66204be32e8f6e0 [stream]
+[debug] [2020-12-29T03:11:54.808Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/play-2048-f02a5/versions/ca2cdeaa8c0c37dc/files/6ecf5d22d0af60e32cf6784a26b5f465c4b42499ee5257c21045c29647736538 200
+[debug] [2020-12-29T03:11:54.808Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/play-2048-f02a5/versions/ca2cdeaa8c0c37dc/files/6ecf5d22d0af60e32cf6784a26b5f465c4b42499ee5257c21045c29647736538 [stream]
+[debug] [2020-12-29T03:11:54.808Z] [hosting][upload queue][FINAL] {"max":1620,"min":1474,"avg":1526.6666666666667,"active":0,"complete":9,"success":9,"errored":0,"retried":0,"total":9,"elapsed":1624}
+[info] +  hosting[play-2048-f02a5]: file upload complete 
+[debug] [2020-12-29T03:11:54.810Z] [hosting] deploy completed after 3443ms
+[debug] [2020-12-29T03:11:54.860Z] [
+  {
+    "config": {
+      "public": "build",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ],
+      "site": "play-2048-f02a5"
+    },
+    "site": "play-2048-f02a5",
+    "version": "sites/play-2048-f02a5/versions/ca2cdeaa8c0c37dc"
+  }
+]
+[info] i  hosting[play-2048-f02a5]: finalizing version... 
+[debug] [2020-12-29T03:11:54.862Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2020-12-29T03:11:54.863Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2020-12-29T03:11:54.930Z] <<< HTTP RESPONSE 200 {"pragma":"no-cache","expires":"Mon, 01 Jan 1990 00:00:00 GMT","date":"Tue, 29 Dec 2020 03:11:54 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-12-29T03:11:54.935Z] >>> HTTP REQUEST PATCH https://firebasehosting.googleapis.com/v1beta1/sites/play-2048-f02a5/versions/ca2cdeaa8c0c37dc?updateMask=status  
+ {"status":"FINALIZED"}
