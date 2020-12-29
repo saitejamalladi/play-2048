@@ -1,6 +1,6 @@
 .Container {
 	outline: 0;
-	height: 130vh;
+	height: 100vh;
 }
 .GAM2048 {
 	display: inline-block;
@@ -125,6 +125,10 @@
 	justify-content: space-evenly;
 }
 
+.BackDrop {
+	background-color: rgb(144 140 140 );
+	opacity: 0.3;
+}
 .Modal {
 	display: flex;
 	align-items: center;
@@ -145,17 +149,59 @@
 	text-decoration: none;
 	text-transform: uppercase;
 	color: #f9f6f2;
-	height: 40px;
 	line-height: 42px;
 	cursor: pointer;
-	display: block;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 	text-align: center;
 	font-weight: bold;
 	font-size: 50px;
 	font-family: inherit;
 	float: right;
 	outline: 0;
+	width: 420px;
+	height: 420px;
+	margin-top: 140px;
 }
+.GameOver {
+	outline: 0;
+	border: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+	align-items: center;
+	width: 420px;
+	height: 420px;
+	margin-top: 140px;
+	background-color: rgb(144, 140, 140, 0.1);
+}
+.GameOver .Text {
+	color: #FFFFFF;
+	font-weight: bold;
+	font-size: 30px;
+}
+
+.GameOver .TryAgain {
+	margin-top: 10px;
+	background-color: #8f7a66;
+	letter-spacing: 1px;
+	border: 0;
+	border-radius: 3px;
+	text-decoration: none;
+	color: #f9f6f2;
+	width: 120px;
+	height: 40px;
+	cursor: pointer;
+	display: block;
+	text-align: center;
+	font-weight: bold;
+	font-size: 18px;
+	float: right;
+	outline: 0;
+}
+
 @media only screen and (min-width: 600px) {
 	.Container {
 		height: 100vh;

@@ -8,6 +8,8 @@ import {Backdrop, Modal} from "@material-ui/core";
 class GAM2048 extends Component {
 	state = {
 		active: false,
+		gameOver: false,
+		gameCompleted: false,
 		board : null,
 		rows: 4,
 		cols: 4
@@ -196,13 +198,13 @@ class GAM2048 extends Component {
 			for(let col=1; col<= board[row-1].length; col++) {
 				if(board[row-1][col-1] === 0) {
 					let rand = Math.floor(Math.random() * 20);
-					let value = 0;
 					if(rand >= 19) {
-						value = 4;
-					} else if(rand >= 11) {
-						value = 2;
+						board[row-1][col-1] = 4;
+					} else if(rand >= 18) {
+						board[row-1][col-1] = 2;
+					} else {
+						board[row-1][col-1] = 0;
 					}
-					board[row-1][col-1] = value
 				}
 			}
 		}
@@ -219,6 +221,13 @@ class GAM2048 extends Component {
 		}
 		updatedBoard = this.populateNewDigits(updatedBoard);
 		this.setState({board: updatedBoard});
+		setTimeout(() => {
+			if(this.isGameCompleted(updatedBoard)) {
+				this.setState({gameCompleted: true});
+			} else if(this.isGameOver(updatedBoard)) {
+				this.setState({gameOver: true});
+			}
+		}, 1000);
 	};
 	handleKeyPress = (event) => {
 		switch (event.key) {
@@ -247,6 +256,7 @@ class GAM2048 extends Component {
 	}
 	handleReset = () => {
 		this.initBoard();
+		this.setState({gameOver: false, gameCompleted: false});
 	}
 	getScore = (grid) => {
 		if(grid && grid.length > 0) {
@@ -302,6 +312,44 @@ class GAM2048 extends Component {
 		})
 		this.handleClick()
 	};
+
+	isGameOver = (grid) => {
+		//Check if there are any empty cells
+		for(let row = 0; row <= 3; row++ ) {
+			for(let col = 0; col <= 3; col++) {
+				if(grid[row][col] === 0) {
+					return false;
+				}
+			}
+		}
+		//Check all rows if consecutive tiles are same
+		for(let row = 0; row <= 3; row++ ) {
+			for(let col = 0; col < 3; col++) {
+				if(grid[row][col] === grid[row][col+1]) {
+					return false;
+				}
+			}
+		}
+		//Check all cols if consecutive tiles are same
+		for(let row = 0; row < 3; row++ ) {
+			for(let col = 0; col <= 3; col++) {
+				if(grid[row][col] === grid[row+1][col]) {
+					return false;
+				}
+			}
+		}
+		return true;
+	}
+	isGameCompleted = (grid) => {
+		for(let row = 0; row <= 3;  row++) {
+			for(let col = 0; col <= 3; col++) {
+				if(grid[row][col] === 2048) {
+					return true;
+				}
+			}
+		}
+		return false;
+	}
 	render() {
 		let board  = null;
 		if(this.state.board && this.state.board.length > 0) {
@@ -343,6 +391,38 @@ class GAM2048 extends Component {
 				>
 					<div className={classes.StartButton} onClick={this.handleStart}>
 						Start!!!
+					</div>
+				</Modal>
+				<Modal
+					aria-labelledby="transition-modal-title"
+					aria-describedby="transition-modal-description"
+					className={classes.Modal}
+					open={this.state.gameOver}
+					closeAfterTransition
+					BackdropComponent={Backdrop}
+					BackdropProps={{
+						timeout: 500,
+					}}
+				>
+					<div className={classes.GameOver} >
+						<div className={classes.Text}>Game Over!</div>
+						<button className={classes.TryAgain} onClick={this.handleReset}>Try again</button>
+					</div>
+				</Modal>
+				<Modal
+					aria-labelledby="transition-modal-title"
+					aria-describedby="transition-modal-description"
+					className={classes.Modal}
+					open={this.state.gameCompleted}
+					closeAfterTransition
+					BackdropComponent={Backdrop}
+					BackdropProps={{
+						timeout: 500,
+					}}
+				>
+					<div className={classes.GameOver} >
+						<div className={classes.Text}>You Win!</div>
+						<button className={classes.TryAgain} onClick={this.handleReset}>Try again</button>
 					</div>
 				</Modal>
 				<div className={classes.GAM2048}>

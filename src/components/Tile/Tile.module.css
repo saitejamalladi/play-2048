@@ -55,6 +55,16 @@
 	background-color: #edc22e;
 	box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.4761904762), inset 0 0 0 1px rgba(255, 255, 255, 0.2857142857);
 }
+.Cell-4096 {
+	font-size: 35px;
+	background-color: #edc22e;
+	box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.4761904762), inset 0 0 0 1px rgba(255, 255, 255, 0.2857142857);
+}
+.Cell-8192 {
+	font-size: 35px;
+	background-color: #edc22e;
+	box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.4761904762), inset 0 0 0 1px rgba(255, 255, 255, 0.2857142857);
+}
 .Cell-final {
 	background-color: #3c3a32;
 }
